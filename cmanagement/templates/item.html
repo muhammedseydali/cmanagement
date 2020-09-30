@@ -1,0 +1,116 @@
+<!DOCTYPE html>  
+<html lang="en">
+<html>
+<head>
+  <style type=""> ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+</style>
+<title>INFINITY</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="static/gg.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="container-fluids">
+<div class="row">
+<div class="col-6" style="background-color: #393937;color: white;height: 45px;">
+<i class="fa fa-instagram" style="margin-top: 14px; margin-left: 100px;"></i>&nbsp
+<i class="fa fa-facebook"></i>&nbsp
+<i class="fa fa-twitter"></i>&nbsp
+<i class="fa fa-google-plus-circle"></i>
+</div>
+<div class="col-6" style="background-color: #393937; color: white;height: 45px;">
+<p style="padding: 11px 20px 11px 40px; margin-left: 400px;"><i class="fa fa-phone"></i>&nbsp&nbsp&nbsp+1   123456789</p>
+</div>
+</div>
+</div>
+<div class="container-fluids">
+<div class="row">
+<div class="col-6" style="height:100px;" style="width: 100px; height: 100px;margin-right: 90px;">
+  <h1>Item Details</h1>
+
+<!--  --></div>
+<div class="col-6 navi" style="height:100px;padding: 25px;">
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>ITEMS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  </head>  
+<body>  
+<form method="POST" class="post-form" action=""   enctype="multipart/form-data">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label"></label>  
+    <div class="col-sm-4">  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">category:</label>  
+    <div class="col-sm-4">
+        
+    <select class='form-control' name="ca" id="ca">
+    {% for b in alii %}
+    <option value="{{b.categories}}">{{b.categories}} </option>
+    {% endfor %}
+  </select> 
+        
+    </div>  
+    </div>  
+    <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">item list:</label>  
+    <div class="col-sm-4">
+      <input type="text"  name="cate" id="cate" required maxlength="">
+
+    </div>
+    <!-- <input type="" name=""> -->
+    </div>
+    <br>    
+       
+    <button type="submit" class="btn btn-primary" >Submit</button>
+    <button type="button" class="btn btn-success"><a href="/cmanagement/alishow/">view datas</a></button>    
+  </div>
+</form>  
+</body>  
+</html>

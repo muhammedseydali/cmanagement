@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    <title>INVENTORY DETAILS</title>  
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<form method="POST" class="post-form" action=""   enctype="multipart/form-data">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+   <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">category:</label>  
+    <div class="col-sm-4">
+        
+    <select class='form-control' name="cat" id="cat">
+    {% for b in IN %}
+    <option value="{{b.categories}}">{{b.categories}} </option>
+    {% endfor %}
+  </select> 
+        
+    </div>  
+    </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">LOCATION:</label>  
+    <div class="col-sm-4">
+        
+    <select class='form-control' name="l" id="l">
+    {% for l in lo %}
+    <option value="{{l.location}}">{{l.location}} </option>
+    {% endfor %}
+  </select> 
+        
+    </div>  
+    </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">ITEM:</label>  
+    <div class="col-sm-4">
+        
+    <select class='form-control' name="it" id="it">
+    {% for b in item %}
+    <option value="{{b.item}}">{{b.item}} </option>
+    {% endfor %}
+  </select> 
+        
+    </div>  
+    </div>  
+    <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">MANUFACTURE:</label>  
+    <div class="col-sm-4">
+      <input type="text"  name="man" id="man">
+
+    </div>
+    </div>
+  </div>
+   <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">SERIAL NUMBER:</label>  
+    <div class="col-sm-4">
+      <input type="text"  name="snum" id="snum">
+    </div>
+    </div>
+  <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">PURCHASE DATE:</label>  
+    <div class="col-sm-4">
+      <input type="text"  name="purchase" id="purchase">
+    </div>
+    </div>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">VENDOR:</label>  
+    <div class="col-sm-4">
+        
+    <select class='form-control' name="ve" id="ve">
+    {% for b in s %}
+    <option value="{{b.name}}">{{b.name}} </option>
+    {% endfor %}
+  </select> 
+        
+    </div>  
+    </div>  
+  <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">WARRANTY:</label>  
+    <div class="col-sm-4">
+      <input type="text"  name="war" id="war">
+
+    </div>
+    </div>
+  </div>
+ <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">QUANTITY:</label>  
+    <div class="col-sm-4">
+      <input type="text"  name="quantity" id="quantity">
+
+    </div>
+    </div>
+  </div>
+  <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">COST:</label>  
+    <div class="col-sm-4">
+      <input type="text"  name="cost" id="cost">
+
+    </div>
+    </div>
+  <div class="form-group row">  
+      <label class="col-sm-2 col-form-label">TOTAL:</label>  
+    <div class="col-sm-4">
+      <input type="text"  name="total" id="total">
+
+    </div>
+    </div>
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-success"><a href="/cmanagement/inventshow/">view datas</a></button>    
+  
+    </div> 
+
+
+  </div>
+    </div>  
+</form>  
+</body>  
+</html>  
+
